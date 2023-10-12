@@ -1,30 +1,38 @@
-#include<iostream>
-#include<ctime>
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-    srand((unsigned int)time(NULL));
-    int number =(rand()&100)+1;
-    int guess =0;
-    do
-    {
-        cout<<"ENTER GUESS(1-100):";
-        cin>>guess;
-        if(guess>number)
+    int num1 , num2;
+    char op;
 
-            cout<<"GUESS LOWER!"<<endl;
-            else if(guess<number)
+    cout << "ENTER YOUR FIRST NUMBER: ";
+    cin >> num1;
 
-                cout<<"GUESS HIGHER!"<<endl;
-                else
+    cout << "ENTER THE OPERATOR: ";
+    cin >> op;
 
-                    cout<<"YOU WON!"<<endl;
+    cout <<"ENTER YOUR SECOND NUMBER: ";
+    cin >> num2;
 
-                }
-                while(guess!=number);
-                return 0;
+    int result;
+    if (op == '+'){
+        result = num1 + num2 ;}
+
+    else if (op == '-'){result = num1 - num2;}
+
+    else if (op == '*'){result = num1 * num2;}
+
+    else if (op == '/'){result = num1 / num2;}
+
+    else {cout << "INVALID OPERATOR";}
+
+    cout << result;
+
+        return 0;
 
 
-            }
+
+
+}
